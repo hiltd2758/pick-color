@@ -215,3 +215,6 @@ window.addEventListener('error', (e) => {
     console.error('Error:', e.message);
     showToast('Something went wrong. Please try again.');
 });
+
+
+
