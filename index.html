@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="mode-switch">
+            <button class="mode-btn active" data-mode="solid">Solid Color</button>
+            <button class="mode-btn" data-mode="gradient">Gradient</button>
+        </div>
+
+        <div class="color-display" role="region" aria-label="Color preview"></div>
+
+        <div class="controls">
+            <div class="solid-controls">
+                <div class="input-group">
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" placeholder="Enter color (name, hex, rgb, hsl)" aria-label="Color input">
+                    <input type="color" id="colorPicker" aria-label="Color picker">
+                </div>
+            </div>
+
+            <div class="gradient-controls">
+                <div class="input-group">
+                    <label for="gradientColor1">Color 1:</label>
+                    <input type="color" id="gradientColor1" value="#ff0000" aria-label="First gradient color">
+                </div>
+                <div class="input-group">
+                    <label for="gradientColor2">Color 2:</label>
+                    <input type="color" id="gradientColor2" value="#0000ff" aria-label="Second gradient color">
+                </div>
+                <div class="input-group">
+                    <label for="gradientAngle">Angle:</label>
+                    <input type="range" id="gradientAngle" min="0" max="360" value="90" aria-label="Gradient angle">
+                    <span id="angleValue">90°</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 20px;">Color Palette</h3>
+        <div class="color-palette" role="listbox" aria-label="Color palette"></div>
+
+        <div class="color-info">
+            <span class="color-value"></span>
+            <button class="copy-button" aria-label="Copy color value">Copy</button>
+        </div>
+    </div>
+
+    <div class="toast" role="alert" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
